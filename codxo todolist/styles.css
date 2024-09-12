@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #85f0b7; 
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: backgroundAnimation 3s ease-in-out infinite; 
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #54bdd7;
+    }
+    33% {
+        background-color: #c3cfe2;
+    }
+    66% {
+        background-color: #ffc107;
+    }
+    100% {
+        background-color: #54bdd7;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(125, 243, 243, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(222, 149, 149, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.3s ease;
+}
+
+li:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-text {
+    flex: 1;
+    cursor: pointer;
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.button-container {
+    display: flex;
+    gap: 5px;
+}
+
+.edit, .delete {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.edit {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.delete {
+    background-color: #dc3545;
+}
+
+.fall {
+    transform: translateY(10px);
+    opacity: 0;
+}
+
+.edit-input {
+    flex: 1;
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
